@@ -15,10 +15,11 @@ header {
   color: #17365d;
   font-size: medium; 
   padding: 2rem 4%;
-  width: min(92%, 900px);
+  width: min(100% - 32px, 1100px);
   margin: 0 auto;
-  border-radius: 0 0 10px 10px;
+  border-radius: 10px;
   text-align: center;
+  margin-top: 16px;
 } 
   
 header h1 { 
@@ -26,9 +27,6 @@ header h1 {
 } 
   
 nav { 
-  background: white; 
-  padding: 0.75rem 4%; 
-  border-bottom: 1px solid #dbe2ea;
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
@@ -38,7 +36,8 @@ nav {
 nav a { 
   color: #f9f8f8; 
   font-weight: 700; 
-  text-decoration: none; 
+  text-decoration: none;
+  padding: 4px 8px; 
 } 
   
 nav a:hover { 
@@ -50,15 +49,16 @@ footer {
   color : #17365d; 
   font-size: medium;
   padding: 1.25rem 4%; 
-  width: min(92%, 900px);
+  width: min(100% - 32px, 1100px);
   margin: 0 auto;
-  border-radius: 10px 10px 0 0;
-  text-align: center; 
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 16px; 
 }
 
 main {
-    width: min(92%, 900px);
-    margin: 0 auto;
+    width: min(100% - 32px, 1100px);
+    margin-inline: auto;
     padding: 2rem 0 3rem;
 }
 
@@ -83,8 +83,16 @@ p {
     margin-top: 0; 
 }
   
-section { padding: 28px 0; border-top: 1px solid #fcfeff; } 
-img { max-width: 100%; height: auto; } 
+section { 
+  padding: 28px 0; 
+  border-top: 1px solid #fcfeff; 
+} 
+
+img { 
+  max-width: 100%; 
+  height: auto; 
+  display: block;
+} 
 
 .card { 
   background: #17365d; 
@@ -92,4 +100,39 @@ img { max-width: 100%; height: auto; }
   border-radius: 10px; 
   padding: 1.25rem; 
   margin-bottom: 1rem; 
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.card-list > .card {
+  flex: 1 1 260px;
+  margin-bottom: 0;
+}
+
+.card > h2:first-child {
+  margin-top: 0;
+}
+
+figure {
+  margin: 0 0 1rem;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  header {
+    padding: 1.25rem 4%;
+  }
 }
